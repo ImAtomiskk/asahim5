@@ -21,6 +21,7 @@ Proxy mode connects but returns all zeros. Suspected MMIO base address drift in 
 ## Quick Reference
 
 - SoC: T8142 / Hidra (base M5, not Pro)
+- MoBo: j704
 - Closest Asahi target: T8122 (M3 base)
 - Serial device: `/dev/ttyACM0`
 - Proxy env: `export M1N1_PORT=/dev/ttyACM0`
