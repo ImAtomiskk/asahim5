@@ -110,7 +110,17 @@ ls /Volumes/  # your USB name should appear here
 ```
 
 ### 3. Write m1n1
+**macOS 12.0 or Higher**
+ ```bash
+kmutil configure-boot \
+  -c "/Volumes/<YOUR-USB>/m1n1/build/m1n1.bin" \
+  --raw \
+  --entry-point 2048 \
+  --lowest-virtual-address 0 \
+  -v "/Volumes/Macintosh HD - Data"
+``` 
 
+**macOS 11.0 or Lower**
 ```bash
 kmutil configure-boot \
   -c "/Volumes/<YOUR-USB>/m1n1/build/m1n1.macho" \
@@ -118,7 +128,7 @@ kmutil configure-boot \
   --entry-point 2048 \
   --lowest-virtual-address 0 \
   -v "/Volumes/Macintosh HD - Data"
-```
+``` 
 
 Replace `<YOUR-USB>` with your actual USB volume name. If your data volume has a different name, adjust accordingly — use `diskutil list` to confirm.
 
