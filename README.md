@@ -16,7 +16,7 @@ Progressed with Trial & Error, Documented By Claude.
 
 ## Current Blocker
 
-Proxy mode connects but returns all zeros. Suspected MMIO base address drift in proxy client. Next step: capture m1n1 boot log via picocom to get real M5 memory map, then patch `proxyclient/hw/` constants.
+Nothing rn, just thinking what to do
 
 ## Quick Reference
 
