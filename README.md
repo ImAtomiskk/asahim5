@@ -10,7 +10,7 @@ Apple M5 (T8142 "Hidra") — personal Linux bringup project.
 | `soc.md` | T8142 SoC info, lineage, driver status table, compatible string strategy |
 | `proxy-hypervisor.md` | Proxy mode status, zeros problem, hypervisor mode setup |
 | `drivers.md` | Driver strategy, RE approach, per-subsystem notes |
-| `recovery.md` | Firmware wipe incidents, DFU recovery, No Security mode, signed IPSWs |
+| `unrelated.md` | Other things that happened during this process |
 
 ## Current Blocker
 
