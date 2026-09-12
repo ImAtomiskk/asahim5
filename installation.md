@@ -36,7 +36,7 @@ git clone --recursive https://github.com/AsahiLinux/m1n1
 cd m1n1
 
 # Compile
-make
+make -j$(sysctl -n hw.ncpu)
 ```
 
 ## On Ubuntu / Debian Linux
@@ -50,7 +50,7 @@ git clone --recursive https://github.com/AsahiLinux/m1n1
 cd m1n1
 
 # Compile
-make
+make -j$(nproc)
 ```
 
 After a successful build, `build/m1n1.macho` and `build/m1n1.bin` will be present. Both are needed — `.macho` for installation, `.bin` for proxy/hypervisor mode.
@@ -130,7 +130,7 @@ A successful write produces no error output. If you see a permissions error, you
 reboot
 ```
 
-The MacBook will reboot. Instead of the normal Apple logo boot sequence, the screen will go dark or show minimal output — this is normal. m1n1 is running.
+The MacBook will reboot. Instead of the normal Apple logo boot sequence, the screen will show a asahi logo, go dark then show some logs  — this is normal. m1n1 is running.
 
 ---
 
