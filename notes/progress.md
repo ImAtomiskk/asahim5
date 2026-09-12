@@ -5,6 +5,7 @@
 * Compile m1n1 ✔
 * Install m1n1 ✔
 * Boot m1n1 (proxy mode) ✔
+* Dump Essential Files ✔
 * Boot m1n1 (hypervisor/guest mode) ❌
 * Boot Linux (in guest mode) ❌
 * Make Drivers ❌
