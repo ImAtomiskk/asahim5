@@ -2,8 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/m1n1n" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/m1n1n/artwork" vcs="Git" />
-    <mapping directory="$PROJECT_DIR$/m1n1n/rust/vendor/rust-fatfs" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/m1n1" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/m1n1/artwork" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/m1n1/rust/vendor/rust-fatfs" vcs="Git" />
   </component>
 </project>
