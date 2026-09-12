@@ -8,6 +8,15 @@ If Your Computer Starts Up To An Exclamation Circle, Here's What to Do
 > ⚠️ **WARNING**:  
 > If Your Device Gets To This Point, You Have Lost All of Your Data, Unless You Use Drive Recovery Software (Disk Drill, etc.)
 
+## Table of Contents:
+
+| Topic                                     | Description         |
+|:------------------------------------------|:--------------------|
+| [1.0 - Preparation](#10---preparation)    | Device Preparation  |
+| [1.1 - DFU Port/Mode](#11---dfu-portmode) | DFU Information     |
+| [2.0 - Restore](#20---restore)            | Restore Information |
+| [Troubleshooting](#-troubleshooting)      | Troubleshooting     |
+
 ## 1.0 - Preparation
 ### Requirements:
 * **Mac OR Ubuntu Computer with libimobiledevice + idevicerestore**  
@@ -29,7 +38,7 @@ If Your Computer Starts Up To An Exclamation Circle, Here's What to Do
 > ![](https://cdsassets.apple.com/live/7WUAS350/images/mac-os/sonoma/t2-macbook-pro-left-side-ports-rightmost-usb-c-port-location-illustration.png)
 
 ### How to Enter DFU Mode:
-1. Connect The Two Computers Together Using a USB C-C Cable (Make Sure **No MagSafe** Power Cables Are Connected)
+1. Connect The Two Computers Together Using a **USB C-C** Cable (Make Sure **No MagSafe** Power Cables Are Connected)
 
 2. Press and hold the power (Touch ID) button for up to 10 seconds, until the Mac turns off. If the Mac turns on instead, repeat this step.
 
@@ -53,7 +62,7 @@ If Your Computer Starts Up To An Exclamation Circle, Here's What to Do
 6. The affected Mac is now in DFU mode and should show a blank screen. Follow the steps below to restore.
 
 ## 2.0 - Restore
-### macOS Instructions:
+### 🍎 macOS Instructions:
 **Option 1**
 1. Open Finder On The Working Computer
 2. Select The Affected Mac
@@ -68,7 +77,7 @@ If Your Computer Starts Up To An Exclamation Circle, Here's What to Do
 3. Then Select "Revive", Like in the Image, Or "Restore"
 ![](https://support.ntiva.com/hc/article_attachments/20782637559693)
 
-### Linux Instructions:
+### 🐧 Linux Instructions:
 **Option 1 (Recommended)**
 1. Download Your macOS IPSW at [IPSW.me](https://ipsw.me/product/Mac)
 2. Run The Restore Command in Your Terminal:  
@@ -84,7 +93,7 @@ If Your Computer Starts Up To An Exclamation Circle, Here's What to Do
 
 
 ## After That, You're Restored
-### Troubleshooting:
+### 🛠️ Troubleshooting:
 **Linux:**  
 If DFU Mode Isn't Detected, Run idevicerestore with -d  
 ``sudo idevicerestore -d -e <path>``  
