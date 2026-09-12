@@ -28,4 +28,4 @@ Nothing rn, just thinking what to do
 - Closest Asahi target: T8122 (M3 base)
 - Serial device: `/dev/ttyACM0`
 - Proxy env: `export M1N1_PORT=/dev/ttyACM0`
-- Have signed macOS 26.0 IPSW saved locally
+- Have signed macOS 26.0(.1) IPSW saved locally
