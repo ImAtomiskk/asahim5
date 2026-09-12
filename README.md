@@ -1,4 +1,4 @@
-# M5 Linux Bringup Notes
+# M5 Linux Bringup
 
 Apple M5 (T8142 "Hidra") — personal Linux bringup project.  
 Progressed with Trial & Error, Documented By Claude.
