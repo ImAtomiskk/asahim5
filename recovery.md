@@ -29,7 +29,7 @@ If Your Computer Starts Up To An Exclamation Circle, Here's What to Do
 > ![](https://cdsassets.apple.com/live/7WUAS350/images/mac-os/sonoma/t2-macbook-pro-left-side-ports-rightmost-usb-c-port-location-illustration.png)
 
 ### How to Enter DFU Mode:
-1. Connect The Two Computers Together Using a USB C-C Cable (Make Sure **No** MagSafe Power Cables Are Connected)
+1. Connect The Two Computers Together Using a USB C-C Cable (Make Sure **No MagSafe** Power Cables Are Connected)
 
 2. Press and hold the power (Touch ID) button for up to 10 seconds, until the Mac turns off. If the Mac turns on instead, repeat this step.
 
@@ -54,11 +54,19 @@ If Your Computer Starts Up To An Exclamation Circle, Here's What to Do
 
 ## 2.0 - Restore
 ### macOS Instructions:
+**Option 1**
 1. Open Finder On The Working Computer
 2. Select The Affected Mac
 3. Click Revive (If Available), otherwise, click Restore
 ![](https://cdsassets.apple.com/live/7WUAS350/images/macos/tahoe/macos-tahoe-26-finder-locations-mac-connected-dfu-mode-revive-restore.png)
 4. Wait for it to finish
+
+**Option 2 (Recommended)**
+1. Install [Apple Configurator](https://apps.apple.com/us/app/apple-configurator/id1037126344?mt=12) from the App Store
+2. Open Apple Configurator and Right-Click the DFU Icon, should look like the image below:
+![](https://i.shgcdn.com/b3cb8faf-1ec2-4169-b5a0-7d757ced4373/-/format/auto/-/preview/3000x3000/-/quality/lighter/)
+3. Then Select "Revive", Like in the Image, Or "Restore"
+![](https://support.ntiva.com/hc/article_attachments/20782637559693)
 
 ### Linux Instructions:
 **Option 1 (Recommended)**
@@ -76,3 +84,11 @@ If Your Computer Starts Up To An Exclamation Circle, Here's What to Do
 
 
 ## After That, You're Restored
+### Troubleshooting:
+**Linux:**  
+If DFU Mode Isn't Detected, Run idevicerestore with -d  
+``sudo idevicerestore -d -e <path>``  
+If the Device Isn't Found, Restart usbmuxd  
+``sudo systemctl stop usbmuxd``  
+**macOS:**  
+Refer [Here](https://theapplewiki.com/wiki/Restore_Errors) For Restore Errors In Apple Configurator OR Finder
