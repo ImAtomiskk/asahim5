@@ -6,6 +6,8 @@ Progressed with Trial & Error, Documented By Claude.
 ## Note: No Reverse Engineering Files will Be Released on this Repository. (i don't know how to make those)
 ## Note 2: if i accidentally do something that asahi doesn't want, i'll remove it immediately
 
+## Why? Apple is Discontinuing Rosetta/2 in future macOS releases (macOS 27, 28, etc.) and I still want a chance to run "Intel" apps
+
 ## Files (All Files are **exactly** the same ones that I use/test on my own M5)
 
 | File                  | Contents                                                                 |
@@ -29,7 +31,7 @@ Nothing rn, just thinking what to do
 
 - SoC: T8142 / Hidra (base M5, not Pro)
 - MoBo: j704
-- Closest Asahi target: T8122 (M3 base)
+- Closest Asahi target: T8122 (M3 base) or T8132 (M4 base)
 - Serial device: `/dev/ttyACM0`
 - Proxy env: `export M1N1_PORT=/dev/ttyACM0`
 - Have signed macOS 26.0(.1) IPSW saved locally
