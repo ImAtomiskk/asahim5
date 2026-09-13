@@ -3,7 +3,7 @@
 Apple M5 (T8142 "Hidra") — personal Linux bringup project.  
 Progressed with Trial & Error, Documented By Claude.
 
-## Note: No Reverse Engineering Files will Be Released on this Repository. (i don't know how to make those)
+## Note: No Reverse Engineering Files will Be Released on this Repository. (i don't know how to make those yet)
 ## Note 2: if i accidentally do something that asahi doesn't want, i'll remove it immediately
 ## Note 3: I've only tried this on macOS 26.0.1, it will not work on any macOS version that introduced mBoot (26.4+)
 
