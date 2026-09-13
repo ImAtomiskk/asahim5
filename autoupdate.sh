@@ -33,10 +33,6 @@ else
 fi
 
 
-# kmutil configures the boot daemon for the specified volume container
-kmutil configure-boot -c "/Volumes/Macintosh HD/Users/Shared/asahim5/m1n1/build/m1n1.bin" \
-    --raw-boot-object "$REPO_PATH/build/m1n1.bin"
-
 if [ "$MAJOR_VERSION" -ge 11 ]; then
     echo "Starting Installation for macOS" "$MAJOR_VERSION""..."
     kmutil configure-boot -c "/Volumes/Macintosh HD/Users/Shared/asahim5/m1n1/build/m1n1.bin" \
