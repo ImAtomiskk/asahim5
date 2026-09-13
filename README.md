@@ -6,7 +6,7 @@ Progressed with Trial & Error, Documented By Claude.
 ## Note: No Reverse Engineering Files will Be Released on this Repository. (i don't know how to make those)
 ## Note 2: if i accidentally do something that asahi doesn't want, i'll remove it immediately
 
-## Files
+## Files (All Files are **exactly** the same ones that I use/test on my own M5)
 
 | File                  | Contents                                                                 |
 |-----------------------|--------------------------------------------------------------------------|
