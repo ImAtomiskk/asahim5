@@ -1,0 +1,10 @@
+!build/.keep
+build/
+__pycache__
+*.pyc
+*.macho
+*.swp
+*.orig
+*.rej
+/rust/target
+.idea
