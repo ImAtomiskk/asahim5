@@ -18,6 +18,8 @@ Progressed with Trial & Error, Documented By Claude.
 | `drivers.md`          | Driver strategy, RE approach, per-subsystem notes                        |
 | `unrelated.md`        | Other things that happened during this process                           |
 | `installation.md`     | Installation Steps I Took to Install m1n1                                | 
+| `recovery.md`         | Recovery Instructions                                                    |
+
 
 ## Most Recent Achievement
 
