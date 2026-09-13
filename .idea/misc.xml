@@ -3,6 +3,10 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.14" />
   </component>
+  <component name="CMakePythonSetting">
+    <option name="pythonIntegrationState" value="YES" />
+  </component>
+  <component name="CMakeWorkspace" PROJECT_DIR="$PROJECT_DIR$" />
   <component name="ProjectRootManager" version="2" languageLevel="JDK_25" project-jdk-name="Python 3.14" project-jdk-type="Python SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
