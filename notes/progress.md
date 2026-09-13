@@ -6,7 +6,7 @@
 * Install m1n1 ✔
 * Boot m1n1 (proxy mode) ✔
 * Dump Essential Files ✔
-* Boot m1n1 (hypervisor/guest mode) ➖
+* Boot m1n1 (hypervisor/guest mode) ✔ (it mostly works, so I'll count it for now)
 * Boot Linux (in guest mode) ❌
 * Make Drivers ❌
 * Boot Linux (for real) ❌

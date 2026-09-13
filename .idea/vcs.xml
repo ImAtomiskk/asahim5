@@ -4,6 +4,8 @@
     <mapping directory="" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/m1n1" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/m1n1/artwork" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tsschecker" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tsschecker/external/jssy" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/u-boot" vcs="Git" />
   </component>
 </project>
