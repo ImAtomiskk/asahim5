@@ -17,6 +17,10 @@ Progressed with Trial & Error, Documented By Claude.
 | `unrelated.md`        | Other things that happened during this process                           |
 | `installation.md`     | Installation Steps I Took to Install m1n1                                | 
 
+## Most Recent Achievement
+
+Added M5 MCC Compatibility via TrustZone Registers
+
 ## Current Blocker
 
 Nothing rn, just thinking what to do
