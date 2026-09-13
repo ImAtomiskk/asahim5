@@ -10,8 +10,10 @@ Progressed with Trial & Error, Documented By Claude.
 
 ## Files (All Files are **exactly** the same ones that I use/test on my own M5)
 
-| File                  | Contents                                                                 |
+| File/Folder           | Contents                                                                 |
 |-----------------------|--------------------------------------------------------------------------|
+| `autoupdate.sh`       | Automatic Updater for This Git Repository (NOTE: THIS DOES NOT WORK YET) |
+| `readme.md`           | This File                                                                |
 | `progress.md`         | Checklist, roadmap, end goals                                            |
 | `soc.md`              | T8142 SoC info, lineage, driver status table, compatible string strategy |
 | `proxy-hypervisor.md` | Proxy mode status, zeros problem, hypervisor mode setup                  |
@@ -19,6 +21,11 @@ Progressed with Trial & Error, Documented By Claude.
 | `unrelated.md`        | Other things that happened during this process                           |
 | `installation.md`     | Installation Steps I Took to Install m1n1                                | 
 | `recovery.md`         | Recovery Instructions                                                    |
+| `m1n1`                | m1n1 Source Folder                                                       | 
+| `m1n1-bak`            | m1n1 Source Backup                                                       |
+| `u-boot`              | u-Boot Bootloader Source Folder                                          |
+| `notes`               | All of My Notes (Files Above)                                            |
+| `dump`                | dumped device trees                                                      |
 
 
 ## Most Recent Achievement
