@@ -19,6 +19,14 @@
 **macOS Firmware IPSW** — download from [ipsw.me](https://ipsw.me/product/Mac/) — recommended to save a day-one build (e.g. 25A8364) before updating  
 **macOS Backup** — Time Machine or equivalent before starting
 
+## Disable FileVault
+Head To Privacy & Security in System Settings (Apple Logo -> System Settings)
+![](https://cdn.discordapp.com/attachments/1412862335701487780/1549142541650100274/Skjermbilde_2026-09-14_kl._3.38.20_pm.png?ex=6aa99eeb&is=6aa84d6b&hm=796b0d6f6c91f76fe51359ef1a865c5d4aa5f16c8111375424de7a1486d92bbd&)
+
+Then Go Into FileVault
+![](https://cdn.discordapp.com/attachments/1412862335701487780/1549142741882249277/Skjermbilde_2026-09-14_kl._3.39.09_pm.png?ex=6aa99f1b&is=6aa84d9b&hm=733ff69dcd46cce40d47c2f852dedc67d5942d8efe26ff6626a13b59bdc67595&)
+and Flick the Toggle **Off**
+
 ---
 
 # 1.1 - Compiling m1n1
