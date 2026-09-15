@@ -110,7 +110,9 @@ elif [[ -e /usr/bin/make ]] && [[ -e /usr/bin/git ]] && [[ -e /usr/bin/gcc ]] &&
               sudo apt install git -y
               git clone "https://github.com/ImAtomiskk/asahim5.git"
             fi
-            main_menu
+            echo "Please Restart EZBuilder"
+            read -r -n 1 -s -p "Press any key to continue..."
+            exit 0
         elif [[ $num -eq 2 ]]; then
             clear
             if [[ -e /usr/bin/gcc ]]; then
