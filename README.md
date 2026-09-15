@@ -1,7 +1,7 @@
 # M5 Linux Bringup (Asahi Aperture)
 
 Apple M5 (T8142 "Hidra") — personal Linux bringup project.  
-Progressed with Trial & Error, Documented By Claude.
+Progressed with Trial & Error, Documented By Myself :D
 
 ## Note: No Reverse Engineering Files will Be Released on this Repository. (i don't know how to make those yet)
 ## Note 2: if i accidentally do something that asahi doesn't want, i'll remove it immediately
