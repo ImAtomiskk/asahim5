@@ -1,4 +1,4 @@
-# M5 Linux Bringup
+# M5 Linux Bringup (Asahi Aperture)
 
 Apple M5 (T8142 "Hidra") — personal Linux bringup project.  
 Progressed with Trial & Error, Documented By Claude.
