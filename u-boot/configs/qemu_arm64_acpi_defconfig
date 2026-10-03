@@ -1,2 +1,0 @@
-#include <configs/qemu_arm64_defconfig>
-#include <board/emulation/configs/acpi.config>

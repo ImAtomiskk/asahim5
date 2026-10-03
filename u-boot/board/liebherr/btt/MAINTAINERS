@@ -1,6 +1,0 @@
-BTT BOARD
-M:	Lukasz Majewski <lukma@denx.de>
-S:	Maintained
-F:	board/liebherr/btt/
-F:	include/configs/btt.h
-F:	configs/imx28_btt3_defconfig

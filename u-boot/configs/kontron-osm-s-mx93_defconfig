@@ -1,3 +1,0 @@
-#include <configs/kontron-osm-s-mx93.config>
-
-CONFIG_SPL_BOOTROM_SUPPORT=y

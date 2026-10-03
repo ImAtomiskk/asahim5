@@ -1,7 +1,0 @@
-config FACTORYSET
-	bool
-
-config DDR_SI_TEST
-	bool "DDR signal integrity test implementations"
-	depends on TARGET_CAPRICORN
-	default y

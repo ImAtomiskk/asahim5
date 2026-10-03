@@ -1,3 +1,0 @@
-#include <configs/qemu-riscv64_smode_defconfig>
-#include <board/emulation/configs/acpi.config>
-CONFIG_CONSOLE_RECORD=y
