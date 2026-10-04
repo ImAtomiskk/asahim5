@@ -1,11 +1,11 @@
 # M5 Linux Bringup
 
 Apple M5 (T8142 "Hidra") — personal Linux bringup project.  
-Progressed with Trial & Error, Documented By Claude.
+Progressed with Trial & Error
 
-## Note: No Reverse Engineering Files will Be Released on this Repository. (i don't know how to make those yet)
-## Note 2: if i accidentally do something that asahi doesn't want, i'll remove it immediately
-## Note 3: I've only tried this on macOS 26.0.1, it will not work on any macOS version that introduced mBoot (26.4+)
+[![Static Badge](https://img.shields.io/badge/GitHub-ImAtomiskk\AsahiM5-blue?logo=github)](https://github.com/ImAtomiskk/asahim5)  
+![](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
+
 
 ## Why? Apple is Discontinuing Rosetta/2 in future macOS releases (macOS 27, 28, etc.) and I still want a chance to run "Intel" apps
 
@@ -31,7 +31,7 @@ Progressed with Trial & Error, Documented By Claude.
 
 ## Most Recent Achievement
 
-Added M5 MCC Compatibility via TrustZone Registers
+(10/03/2026) - Compiled (asahi) Linux Source for M5
 
 ## Current Blocker
 
