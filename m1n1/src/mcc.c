@@ -61,10 +61,10 @@ struct tz_regs t8122_tz_regs = {
 
 struct tz_regs t8142_tz_regs = {
     .count = 4,
-    .stride = 0x04,
-    .start = 0xaa0,
-    .end = 0xab0,
-    .enable = 0xac0,
+    .stride = 0x14,
+    .start = 0x6cc,
+    .end = 0x6d0,
+    .enable = 0x6d8,
 };
 
 struct tz_regs t602x_tz_regs = {

@@ -1,0 +1,310 @@
+TTY> Initialized dockchannel UART at 0x388128000
+TTY> Device info:
+TTY>   Model: Mac17,2
+TTY>   Target: J704
+TTY>   Board-ID: 0x22
+TTY>   Chip-ID: 0x8142
+TTY> 
+TTY> CPU init (MIDR: 0x612f0630 smp_id:0x6)...
+TTY>   CPU part: 0x63 rev: 0x20
+TTY>   CPU: M5 Hidra (P core)
+TTY> 
+TTY> boot_args at 0x10004cec000
+TTY>   revision:     3
+TTY>   version:      2
+TTY>   virt_base:    0x18ff0000
+TTY>   phys_base:    0x10002ff0000
+TTY>   mem_size:     0x3cb310000
+TTY>   top_of_kdata: 0x10004cfc000
+TTY>   video:
+TTY>     base:       0x103d3aa8000
+TTY>     display:    0x1
+TTY>     stride:     0x2f40
+TTY>     width:      3024
+TTY>     height:     1964
+TTY>     depth:      30bpp
+TTY>     density:    1
+TTY>   machine_type: 0
+TTY>   devtree:      0x1a438000
+TTY>   devtree_size: 0x8c000
+TTY>   cmdline:      
+TTY>   boot_flags:   0x0
+TTY>   mem_size_act: 0x400000000
+TTY> 
+TTY> 
+TTY> 
+TTY> m1n1 unknown
+TTY> Source: https://github.com/ImAtomiskk/asahim5
+TTY> Revision: 2 (M5)
+TTY> Modified by: ImCubical
+TTY> 
+TTY> Running in EL2
+TTY> 
+TTY> OS FW version: 26.0 (iBoot-13822.1.2)
+TTY> System FW version: 26.0 (iBoot-13822.1.2)
+TTY> Heap base: 0x10004cfc000
+TTY> MCC: Initializing M5 MCCs (7 instances)...
+TTY> MCC: Initialized M5 MCCs (7 instances, 0 planes, 8 channels)
+TTY> MMU: Initializing...
+TTY> MMU: RAM base: 0x10000000000
+TTY> MMU: Top of normal RAM: 0x103ce300000
+TTY> MMU: TZ2 region has bad bounds 0x0..0x0 (iBoot bug?)
+TTY> MMU: TZ3 region has bad bounds 0xff..0xff (iBoot bug?)
+TTY> MMU: Adding Device-nGnRE mapping at 0x1c50000000 (0x4000)
+TTY> MMU: Adding Device-nGnRE mapping at 0x1c60000000 (0x4000)
+TTY> MMU: Adding Device-nGnRE mapping at 0x1c70000000 (0x4000)
+TTY> MMU: Adding Device-nGnRE mapping at 0x1c80000000 (0x4000)
+TTY> MMU: Adding Device-nGnRE mapping at 0x1cb0000000 (0x14000)
+TTY> MMU: Adding Normal-NC mapping at 0x103ffedc000 (0x20000)
+TTY> MMU: Adding Normal-NC mapping at 0x103ffe9c000 (0x10000)
+TTY> MMU: Adding Normal-NC mapping at 0x103ffe7c000 (0x20000)
+TTY> MMU: Adding Normal-NC mapping at 0x103ffe0c000 (0x10000)
+TTY> MMU: Adding Normal-NC mapping at 0x103ffdec000 (0x20000)
+TTY> MMU: Adding Normal-NC mapping at 0x103ffd7c000 (0x10000)
+TTY> MMU: Adding Normal-NC mapping at 0x103fffb8000 (0x4000)
+TTY> MMU: Adding Normal-NC mapping at 0x103fff30000 (0x4000)
+TTY> MMU: SCTLR_EL1: 30d50980 -> 30901085
+TTY> MMU: running with MMU and caches enabled!
+TTY> AIC: Version 3 @ 0x381000000
+TTY> AIC: AIC3 with 1/2 dies, 2400/4096 IRQs, reg_size:40004, config:10000, extintrcfg_stride:04a00, intmaskset_stride:04a00, intmaskclear_stride:04a00
+TTY> Primary WDT register @ 0x3882b0000
+TTY> Primary WDT disabled
+TTY> Secondary WDT register @ 0x3882b8008
+TTY> Secondary WDT disabled
+TTY> pmgr: Cleaning up device states...
+TTY> pmgr: initialized, 386 devices on 1 dies found.
+TTY> display: Display is internal
+TTY> display: Display is already initialized (3024x1964)
+TTY> fb init: 3024x1964 (30) [s=3024] @0x103d3aa8000
+TTY> fb console: max rows 57, max cols 78
+TTY> fb: display logo
+TTY> Initialization complete.
+TTY> Checking for payloads...
+TTY> Devicetree compatible value: apple,j704
+TTY> Unknown payload at 0x10004638000 (magic: 5b41464b)
+TTY> No valid payload found
+TTY> dart: dart /arm-io/dart-usb0 at 0x402f80000 is a t8110
+TTY> USB0: initialized at 0x10004d00090
+TTY> dart: dart /arm-io/dart-usb1 at 0x40af80000 is a t8110
+TTY> USB1: initialized at 0x10004d00560
+TTY> dart: dart /arm-io/dart-usb3 at 0x41af80000 is a t8110
+TTY> USB3: initialized at 0x10004d00a60
+TTY> Starting Proxy Mode...
+TTY> Heap limit: 0x1000f31c000 (128 MiB)
+Fetching ADT (0x0008C000 bytes)...
+Disable iodev 5
+Disable iodev 6
+Disable iodev 7
+Disable iodev 8
+Disable iodev 9
+Disable iodev 10
+Disable iodev 11
+Initializing hypervisor over iodev 4
+TTY> Starting secondary CPUs...
+TTY> Starting CPU 0 (0:0:0)...   Started.
+TTY> Starting CPU 1 (0:0:1)...   Started.
+TTY> Starting CPU 2 (0:0:2)...   Started.
+TTY> Starting CPU 3 (0:0:3)...   Started.
+TTY> Starting CPU 4 (0:0:4)...   Started.
+TTY> Starting CPU 5 (0:0:5)...   Started.
+TTY> Starting CPU 7 (0:1:1)...   Started.
+TTY> Starting CPU 8 (0:1:2)...   Started.
+TTY> Starting CPU 9 (0:1:3)...   Started.
+TTY> HV: Initializing for 42-bit PA range
+TTY> HV: ECV enabled
+Mapping MMIO range: 0x210000000 .. 0x600000000
+Mapping MMIO range: 0x400000000 .. 0x404074000
+Mapping MMIO range: 0x408000000 .. 0x40c074000
+Mapping MMIO range: 0x410000000 .. 0x414074000
+Mapping MMIO range: 0x418000000 .. 0x41c074000
+Mapping MMIO range: 0x800000000 .. 0xa00000000
+Mapping MMIO range: 0xc00000000 .. 0xe00000000
+Mapping MMIO range: 0x1000000000 .. 0x1200000000
+Mapping MMIO range: 0x1400000000 .. 0x1600000000
+Mapping MMIO range: 0xa00000000 .. 0xa80000000
+Mapping MMIO range: 0xe00000000 .. 0xe80000000
+Mapping MMIO range: 0x1200000000 .. 0x1280000000
+Mapping MMIO range: 0x1600000000 .. 0x1680000000
+Mapping MMIO range: 0x1c50000000 .. 0x1c60000000
+Mapping MMIO range: 0x1c60000000 .. 0x1c70000000
+Mapping MMIO range: 0x1c70000000 .. 0x1c80000000
+Mapping MMIO range: 0x1c80000000 .. 0x1c90000000
+Mapping MMIO range: 0x1cb0000000 .. 0x1cc0000000
+Mapping MMIO range: 0xbc0000000 .. 0xbe0000000
+Mapping MMIO range: 0xb80000000 .. 0xbc0000000
+Mapping MMIO range: 0xac0000000 .. 0xae0000000
+Mapping MMIO range: 0xa80000000 .. 0xac0000000
+Removing ADT node /arm-io/dart-usb0
+Removing ADT node /arm-io/atc-phy0
+Removing ADT node /arm-io/usb-drd0
+Removing ADT node /arm-io/acio0
+Removing ADT node /arm-io/acio-cpu0
+Removing ADT node /arm-io/dart-acio0
+Removing ADT node /arm-io/apciec0
+Removing ADT node /arm-io/dart-apciec0
+Removing ADT node /arm-io/apciec0-piodma
+Removing ADT node /arm-io/i2c0/hpmBusManager/hpm0
+Removing ADT node /arm-io/i2c0/hpmBusManager1/hpm0
+Removing ADT node /arm-io/i2c3/hpmBusManager0/hpm0
+Removing ADT node /arm-io/nub-spmi-a0/hpm0
+Removing ADT node /arm-io/atc0-dpxbar
+Removing ADT node /arm-io/atc0-dpphy
+Removing ADT node /arm-io/atc0-dpin0
+Removing ADT node /arm-io/atc0-dpin1
+Removing ADT node /arm-io/atc-phy0
+LOAD: _HDR 16384 bytes from 0 to 0
+LOAD: TEXT 344064 bytes from 4000 to 4000
+LOAD: RODA 114688 bytes from 58000 to 58000
+LOAD: DATA 442368 bytes from 74000 to 74000
+ZERO: 229376 bytes from 0xe0000 to 0x118000
+LOAD: PYLD 0 bytes from e0000 to 118000
+SKIP: 67108864 bytes from 0x118000 to 0x4118000
+Total region size: 0x710000 bytes
+Physical memory: 0x1001731c000 .. 0x103ce300000
+Guest region start: 0x10018408000
+Mapping guest physical memory...
+Unmapping TZ carveouts...
+Loading kernel image (0x118004 bytes)...
+..............................Entering hypervisor shell. Type ^D to start the guest.
+
+Copying SEPFW (0x5b0000 bytes)...
+Copying TrustCache (0x60000 bytes)...
+Copying preoslog (0x40000 bytes)...
+Adjusting addresses in ADT...
+Removing __OS_LOG from aop
+Removing __OS_LOG from iop-aop-nub
+Removing __OS_LOG from aop2
+Removing __OS_LOG from iop-aop2-nub
+Removing __OS_LOG from mtp
+Removing __OS_LOG from iop-mtp-nub
+Removing __OS_LOG from iop-dcp-nub
+Removing __OS_LOG from iop-dcpext0-nub
+Removing __OS_LOG from iop-dcpext1-nub
+Setting up bootargs at 0x10018b14000...
+>>> 
+now exiting HistoryConsole...
+Disabling other iodevs...
+ - 0
+ - 1
+ - 2
+ - 3
+ - 5
+ - 6
+ - 7
+ - 8
+ - 9
+ - 10
+ - 11
+Doing essential MMIO remaps...
+Updating page tables...
+PT[210000000:210050000] -> HW:HW
+PT[210050000:210050008] -> RESERVED RVBAR
+PT[210050008:210150000] -> HW:HW
+PT[210150000:210150008] -> RESERVED RVBAR
+PT[210150008:210250000] -> HW:HW
+PT[210250000:210250008] -> RESERVED RVBAR
+PT[210250008:210350000] -> HW:HW
+PT[210350000:210350008] -> RESERVED RVBAR
+PT[210350008:210450000] -> HW:HW
+PT[210450000:210450008] -> RESERVED RVBAR
+PT[210450008:210550000] -> HW:HW
+PT[210550000:210550008] -> RESERVED RVBAR
+PT[210550008:211050000] -> HW:HW
+PT[211050000:211050008] -> RESERVED RVBAR
+PT[211050008:211150000] -> HW:HW
+PT[211150000:211150008] -> RESERVED RVBAR
+PT[211150008:211250000] -> HW:HW
+PT[211250000:211250008] -> RESERVED RVBAR
+PT[211250008:211350000] -> HW:HW
+PT[211350000:211350008] -> RESERVED RVBAR
+PT[211350008:23d29c044] -> HW:HW
+PT[23d29c044:23d29c048] -> RESERVED PMGR HACK
+PT[23d29c048:23d29c05c] -> HW:HW
+PT[23d29c05c:23d29c060] -> RESERVED PMGR HACK
+PT[23d29c060:380700270] -> HW:HW
+PT[380700270:380700274] -> RESERVED PMGR HACK
+PT[380700274:380700278] -> HW:HW
+PT[380700278:38070027c] -> RESERVED PMGR HACK
+PT[38070027c:3807002b0] -> HW:HW
+PT[3807002b0:3807002b4] -> RESERVED PMGR HACK
+PT[3807002b4:3807002c8] -> HW:HW
+PT[3807002c8:3807002cc] -> RESERVED PMGR HACK
+PT[3807002cc:380700398] -> HW:HW
+PT[380700398:38070039c] -> RESERVED PMGR HACK
+PT[38070039c:380700470] -> HW:HW
+PT[380700470:380700474] -> RESERVED PMGR HACK
+PT[380700474:380734000] -> HW:HW
+PT[380734000:380734020] -> RESERVED CPU_START
+PT[380734020:3882800c8] -> HW:HW
+PT[3882800c8:3882800cc] -> RESERVED PMGR HACK
+PT[3882800cc:3882800d0] -> HW:HW
+PT[3882800d0:3882800d4] -> RESERVED PMGR HACK
+PT[3882800d4:3a5200000] -> HW:HW
+PT[3a5200000:3a5204000] -> RESERVED VUART
+PT[3a5204000:600000000] -> HW:HW
+PT[800000000:ae0000000] -> HW:HW
+PT[b80000000:be0000000] -> HW:HW
+PT[c00000000:e80000000] -> HW:HW
+PT[1000000000:1280000000] -> HW:HW
+PT[1400000000:1680000000] -> HW:HW
+PT[1c50000000:1c90000000] -> HW:HW
+PT[1cb0000000:1cc0000000] -> HW:HW
+PT[10000000000:10002ff0000] -> HW:RAM-LOW
+PT[1001731c000:10400000000] -> HW:RAM-HIGH
+Uploading ADT (0x84244 bytes)...
+Improving logo...
+Shutting down framebuffer...
+Jumping to entrypoint at 0x1001840c800
+TTY> Exception: SYNC
+TTY> Exception taken from EL2h
+TTY> Running in EL2
+TTY> MPIDR: 0x80010100
+TTY> Registers: (@0x10004637940)
+TTY>   x0-x3: 0080032480200029 000000000000000f 0000000000465878 0000000000000006
+TTY>   x4-x7: 00000100045f6d80 00000000ffffffff 0000000381014200 000000000000c40c
+TTY>  x8-x11: 0000010004637f40 0000000000000000 00000000000400e0 000001000460ead8
+TTY> x12-x15: 0000000000000000 000000000000001e 0000010004604098 0000010004de8010
+TTY> x16-x19: 0000000000010000 0000000000000456 0000000000000039 00000100045fd000
+TTY> x20-x23: 0000010004637b90 0000000000000006 0000000000000001 0000010004604000
+TTY> x24-x27: 00000100045fc628 0000010004637f10 0000000000000004 00000100045fd000
+TTY> x28-x30: 00000000addedbad 0000010004637b40 000001000453935c
+TTY> PC:       0x10004538e38 (rel: 0x14e38)
+TTY> SP:       0x10004637a40
+TTY> SPSR:     0x220002c9
+TTY> FAR:      0x0
+TTY> ESR:      0x2000000 (unknown)
+TTY> L2C_ERR_STS: 0x0
+TTY> L2C_ERR_ADR: 0x0
+TTY> L2C_ERR_INF: 0x0
+TTY> LSU_ERR_STS: 0x0
+TTY> FED_ERR_STS: 0x0
+TTY> MMU_ERR_STS: 0x0
+TTY> Unhandled exception, rebooting...
+Traceback (most recent call last):
+  File "/home/atomisk/Dokumenter/asahim5/m1n1/proxyclient/tools/run_guest.py", line 137, in <module>
+    hv.start()
+    ~~~~~~~~^^
+  File "/home/atomisk/Dokumenter/asahim5/m1n1/proxyclient/m1n1/hv/__init__.py", line 2014, in start
+    self.p.hv_start(self.entry, self.guest_base + self.bootargs_off)
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/atomisk/Dokumenter/asahim5/m1n1/proxyclient/m1n1/proxy.py", line 1123, in hv_start
+    return self.request(self.P_HV_START, entry, *args)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/atomisk/Dokumenter/asahim5/m1n1/proxyclient/m1n1/proxy.py", line 747, in request
+    return self._request(opcode, *args2, **kwargs)
+           ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/atomisk/Dokumenter/asahim5/m1n1/proxyclient/m1n1/proxy.py", line 711, in _request
+    reply = self.iface.proxyreq(req, reboot=reboot, no_reply=no_reply, pre_reply=None)
+  File "/home/atomisk/Dokumenter/asahim5/m1n1/proxyclient/m1n1/proxy.py", line 394, in proxyreq
+    return self.reply(self.REQ_PROXY)
+           ~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "/home/atomisk/Dokumenter/asahim5/m1n1/proxyclient/m1n1/proxy.py", line 265, in reply
+    reply += self.readfull(1)
+             ~~~~~~~~~~~~~^^^
+  File "/home/atomisk/Dokumenter/asahim5/m1n1/proxyclient/m1n1/proxy.py", line 197, in readfull
+    block = self.dev.read(size - len(d))
+  File "/usr/lib/python3/dist-packages/serial/serialposix.py", line 595, in read
+    raise SerialException(
+        'device reports readiness to read but returned no data '
+        '(device disconnected or multiple access on port?)')
+serial.serialutil.SerialException: device reports readiness to read but returned no data (device disconnected or multiple access on port?)

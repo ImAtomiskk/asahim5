@@ -93,7 +93,7 @@ if args.xnu:
                 remove_oslog(nub)
 
 rvbar = entry & ~0xfff
-if rvbar != u.base:
+if rvbar != u.base and u.cpu_features.apple_sysregs_unlocked:
     print("Setting secondary CPU RVBARs...")
 
     for cpu in u.adt["cpus"]:

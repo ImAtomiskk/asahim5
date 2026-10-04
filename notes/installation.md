@@ -33,29 +33,46 @@ and Flick the Toggle **Off**
 
 Build m1n1 on a Mac or Linux machine before putting it on the USB. Do not attempt to compile in recoveryOS.
 
-## On macOS
+## macOS
 
 ```bash
 # Install dependencies
 brew install make python3 gcc-aarch64-embedded
 
 # Clone m1n1
-git clone --recursive https://github.com/AsahiLinux/m1n1
-cd m1n1
+git clone --recursive https://github.com/ImAtomiskk/asahim5.git
+cd asahim5/m1n1
 
 # Compile
 make -j$(sysctl -n hw.ncpu)
 ```
 
-## On Ubuntu / Debian Linux
+
+## Ubuntu / Debian Linux (Option 1, Recommended)
 
 ```bash
 # Install dependencies
 sudo apt install build-essential git python3 python3-pip gcc-aarch64-linux-gnu
 
 # Clone m1n1
-git clone --recursive https://github.com/AsahiLinux/m1n1
-cd m1n1
+git clone --recursive https://github.com/ImAtomiskk/asahim5.git
+cd asahim5
+
+# Run EZBuilder
+chmod +x ezbuilder.sh
+./ezbuilder.sh
+
+```
+
+## Ubuntu / Debian Linux (Option 2)
+
+```bash
+# Install dependencies
+sudo apt install build-essential git python3 python3-pip gcc-aarch64-linux-gnu
+
+# Clone m1n1
+git clone --recursive https://github.com/ImAtomiskk/asahim5.git
+cd asahim5/m1n1
 
 # Compile
 make -j$(nproc)

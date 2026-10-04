@@ -192,6 +192,10 @@ static void hv_update_fiq(void)
             _msr(sr_tkn(sr), regs[rt]);                                                            \
         return true;
 
+
+
+static u64 tpidr_el3_shadow = 0;
+
 static bool hv_handle_msr_unlocked(struct exc_info *ctx, u64 iss)
 {
     u64 reg = iss & (ESR_ISS_MSR_OP0 | ESR_ISS_MSR_OP2 | ESR_ISS_MSR_OP1 | ESR_ISS_MSR_CRn |
@@ -204,6 +208,12 @@ static bool hv_handle_msr_unlocked(struct exc_info *ctx, u64 iss)
     regs[31] = 0;
 
     switch (reg) {
+        case SYSREG_ISS(sys_reg(3, 6, 13, 0, 2)): /* TPIDR_EL3 */
+            if (is_read)
+                regs[rt] = tpidr_el3_shadow;
+            else
+                tpidr_el3_shadow = regs[rt];
+            return true;
         SYSREG_PASS(SYS_IMP_APL_CORE_NRG_ACC_DAT);
         SYSREG_PASS(SYS_IMP_APL_CORE_SRM_NRG_ACC_DAT);
         /* Architectural timer, for ECV */
@@ -352,6 +362,12 @@ static bool hv_handle_msr(struct exc_info *ctx, u64 iss)
     regs[31] = 0;
 
     switch (reg) {
+        case SYSREG_ISS(sys_reg(3, 6, 13, 0, 2)): /* TPIDR_EL3 */
+            if (is_read)
+                regs[rt] = tpidr_el3_shadow;
+            else
+                tpidr_el3_shadow = regs[rt];
+            return true;
         /* clang-format on */
         case SYSREG_ISS(SYS_IMP_APL_IPI_RR_LOCAL_EL1): {
             assert(!is_read);

@@ -1564,7 +1564,7 @@ class HV(Reloadable):
             chip_id = self.u.adt["/chosen"].chip_id
             if chip_id in (0x8103, 0x6000, 0x6001, 0x6002):
                 cpu_start = 0x54000 + die * 0x20_0000_0000
-            elif chip_id in (0x8112, 0x8122, 0x8132, 0x8140, 0x6030):
+            elif chip_id in (0x8112, 0x8122, 0x8132, 0x8140, 0x8142, 0x6030):
                 cpu_start = 0x34000 + die * 0x20_0000_0000
             elif chip_id in (0x6020, 0x6021, 0x6022):
                 cpu_start = 0x28000 + die * 0x20_0000_0000
@@ -1581,14 +1581,14 @@ class HV(Reloadable):
         if not self.u.cpu_features.apple_sysregs_unlocked:
 
             def rvbar_rh(base, off, width):
-                ret = self.entry & ~0xfff | 1
+                ret = self.entry & ~0xfff
                 self.log(f"RVBAR R {base:x}+{off:x}:{width} -> 0x{ret:x}")
                 return ret
 
             for cpu in self.adt["cpus"]:
                 addr, _ = cpu.cpu_impl_reg
-                zone = irange(addr, 4)
-                self.map_hook(addr, 4, read=rvbar_rh)
+                zone = irange(addr, 8)
+                self.map_hook(addr, 8, read=rvbar_rh)
                 self.add_tracer(zone, "RVBAR", TraceMode.RESERVED)
 
     def start_secondary(self, die, cluster, cpu):
