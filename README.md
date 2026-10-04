@@ -4,8 +4,8 @@ Apple M5 (T8142 "Hidra") — personal Linux bringup project.
 Progressed with Trial & Error
 
 [![Static Badge](https://img.shields.io/badge/GitHub-ImAtomiskk\AsahiM5-blue?logo=github)](https://github.com/ImAtomiskk/asahim5)  
-![](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
-
+## Linux: ![](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
+## m1n1: ![](https://img.shields.io/badge/build-passing-brightgreen?style=for-the-badge)
 
 ## Why? Apple is Discontinuing Rosetta/2 in future macOS releases (macOS 27, 28, etc.) and I still want a chance to run "Intel" apps
 
