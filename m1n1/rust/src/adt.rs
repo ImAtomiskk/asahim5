@@ -561,7 +561,7 @@ impl ADTProperty {
             let sp: *const [u8] = core::slice::from_raw_parts(
                 ptr,
                 // Size of name, size of size, size of value
-                size_of::<[char; 32]>() + size_of::<u32>() + *(ptr.add(32)) as usize,
+                size_of::<[c_char; 32]>() + size_of::<u32>() + *(ptr.add(32)) as usize,
             );
 
             sp as *mut ADTProperty
@@ -1037,7 +1037,11 @@ pub unsafe extern "C" fn adt_get_reg(
             return AdtError::BadOffset as c_int;
         }
 
-        while *offsets.add(n_offs) != 0 {
+        loop {
+            let offset = core::ptr::read_volatile(offsets.add(n_offs));
+            if offset == 0 {
+                break;
+            }
             n_offs += 1;
         }
 
