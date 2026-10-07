@@ -2920,8 +2920,10 @@ int kboot_boot(void *kernel)
     tunables_apply_static();
     clk_init();
 
-    usb_init();
-    pcie_init();
+    // M5/T8142: PCIe initialization currently causes an SError
+    // during Linux handoff. Skip it for the initial Linux bring-up.
+    // usb_init();
+    // pcie_init();
     dapf_init_all();
 
     printf("Setting SMP mode to WFE...\n");
