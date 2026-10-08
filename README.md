@@ -45,3 +45,4 @@ Nothing rn, just thinking what to do
 - Serial device: `/dev/ttyACM0`
 - Proxy env: `export M1N1_PORT=/dev/ttyACM0`
 - Have signed macOS 26.0(.1) IPSW saved locally
+- Sub-machine: Intel Core i7-11700KF, 32GB Memory, Ubuntu Studio 26.04
