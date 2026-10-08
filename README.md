@@ -35,7 +35,7 @@ Progressed with Trial & Error
 
 ## Current Blocker
 
-Nothing rn, just thinking what to do
+M5 secondary-core startup
 
 ## Quick Reference
 
