@@ -35,7 +35,7 @@ Progressed with Trial & Error
 
 ## Current Blocker
 
-M5 secondary-core startup
+M5 secondary-core startup or the kernel startup in general
 
 ## Quick Reference
 
