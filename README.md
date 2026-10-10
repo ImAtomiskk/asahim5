@@ -46,3 +46,10 @@ M5 secondary-core startup or the kernel startup in general
 - Proxy env: `export M1N1_PORT=/dev/ttyACM0`
 - Have signed macOS 26.0(.1) IPSW saved locally
 - Sub-machine: Intel Core i7-11700KF, 32GB Memory, Ubuntu Studio 26.04
+
+### Every Commit uses the same testing method
+```
+Edit Code -> Compile -> Check New Additions -> Debug -> Additions Work -> Commit -> Push
+   ^                   /                               /   
+   ^ <- Doesn't Compile        <-- Additions Don't work
+```

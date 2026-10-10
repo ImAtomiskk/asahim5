@@ -7,9 +7,9 @@
 * Boot m1n1 (proxy mode) ✔
 * Dump Essential Files ✔
 * Boot m1n1 (hypervisor/guest mode) ✔ (it mostly works, so I'll count it for now)
-* Boot Linux (in guest mode) ❌
+* Launch U-Boot (Das U-Boot: https://github.com/u-boot/u-boot) --
 * Make Drivers ❌
-* Boot Linux (for real) ❌
+* Boot Linux (for real) ❌ - About 80-90% There
 * Linux Working ❌
 
 ## Roadmap
@@ -18,7 +18,6 @@
 
 **Year 2** — Display via DCP port, USB, basic desktop, video playback, code editing usable
 
-**Year 3+** — GPU RE and driver work, Vulkan, games and emulators
 
 ## End Goal
 
