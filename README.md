@@ -9,6 +9,12 @@ Progressed with Trial & Error
 
 ## Why? Apple is Discontinuing Rosetta/2 in future macOS releases (macOS 27, 28, etc.) and I still want a chance to run "Intel" apps
 
+## Progress
+```
+Start [----|-----------------------|------(#)-----|--------------] Working Linux
+          Finish M1N1 Patch    Patch Kernel     Booting Kernel
+```
+
 ## Files (All Files are **exactly** the same ones that I use/test on my own M5)
 
 | File/Folder           | Contents                                                                 |
@@ -46,6 +52,8 @@ M5 secondary-core startup or the kernel startup in general
 - Proxy env: `export M1N1_PORT=/dev/ttyACM0`
 - Have signed macOS 26.0(.1) IPSW saved locally
 - Sub-machine: Intel Core i7-11700KF, 32GB Memory, Ubuntu Studio 26.04
+- Recommendation: Have a machine with at least 12-16GB Memory for faster compiles
+
 
 ### Every Commit uses the same testing method
 ```

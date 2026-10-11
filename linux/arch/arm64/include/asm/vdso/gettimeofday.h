@@ -15,6 +15,15 @@
 #include <asm/arch_timer.h>
 #include <asm/barrier.h>
 #include <asm/unistd.h>
+#ifndef __NR_gettimeofday
+#define __NR_gettimeofday 169
+#endif
+#ifndef __NR_clock_gettime
+#define __NR_clock_gettime 113
+#endif
+#ifndef __NR_clock_getres
+#define __NR_clock_getres 114
+#endif
 #include <asm/sysreg.h>
 
 #define VDSO_HAS_CLOCK_GETRES		1

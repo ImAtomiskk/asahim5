@@ -6,6 +6,10 @@
 #ifndef __ASSEMBLER__
 
 #include <asm/unistd.h>
+#ifndef __NR_getrandom
+#define __NR_getrandom 278
+#endif
+#include <uapi/asm/unistd.h>
 #include <asm/vdso/vsyscall.h>
 #include <vdso/datapage.h>
 
@@ -36,3 +40,4 @@ static __always_inline ssize_t getrandom_syscall(void *_buffer, size_t _len, uns
 #endif /* !__ASSEMBLER__ */
 
 #endif /* __ASM_VDSO_GETRANDOM_H */
+/* vdso build workaround */
