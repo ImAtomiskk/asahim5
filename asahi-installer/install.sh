@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # SPDX-License-Identifier: MIT
 
 set -e
@@ -18,6 +18,44 @@ export SSL_CERT_FILE=$PWD/Frameworks/Python.framework/Versions/Current/etc/opens
 # so do it again for good measure.
 export PATH="$PWD/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
+
+# Configuration - Change these to match your setup
+instdata="installer_data.json"
+main="main.py"
+REMOTE_BRANCH="origin/main"
+
+echo "Fetching latest updates from remote..."
+git fetch
+
+# Check if the file exists on the remote branch
+if ! git rev-parse "$REMOTE_BRANCH:$instdata" >/dev/null 2>&1; then
+    echo "Error: File '$instdata' does not exist on '$REMOTE_BRANCH'."
+    exit 1
+fi
+
+echo "Checking for updates to: $instdata"
+
+# Compare local file against the remote version
+git diff --exit-code "$REMOTE_BRANCH" -- "$instdata" > /dev/null
+
+# Exit code 0 means they are identical; code 1 means they are different
+if [ $? -eq 0 ]; then
+    echo "The file is already up to date."
+else
+    echo "A new version was found! Updating $instdata..."
+    
+    # Pull only that specific file from the remote branch
+    git checkout "$REMOTE_BRANCH" -- "$instdata"
+    git checkout "$REMOTE_BRANCH" -- "$main"
+
+    
+    if [ $? -eq 0 ]; then
+        echo "File updated successfully!"
+    else
+        echo "Failed to update the file."
+        exit 1
+    fi
+fi
 
 set +e
 macos_ver=$(/usr/libexec/PlistBuddy -c "Print :ProductVersion" \

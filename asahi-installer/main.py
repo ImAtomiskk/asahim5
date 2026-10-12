@@ -618,7 +618,28 @@ class InstallerMain:
                  and (not ipsw.expert_only or self.expert)]
 
         minver.sort(key=lambda ipsw: split_ver(ipsw.version))
-
+        if expert_only == True:
+            print("\n=== DEBUG: choose_ipsw ===")
+            print("System iBoot:", repr(self.sysinfo.sys_firmware),
+                  split_ver(self.sysinfo.sys_firmware))
+            print("System macOS:", repr(self.sysinfo.macos_ver),
+                  split_ver(self.sysinfo.macos_ver))
+            print("System SFR:", repr(self.sysinfo.sfr_full_ver),
+                  split_ver(self.sysinfo.sfr_full_ver))
+            print("Device class:", repr(self.sysinfo.device_class))
+            print("Supported firmware:", repr(supported_fw))
+            print("Candidates:", [
+                {
+                    "version": ipsw.version,
+                    "min_iboot": ipsw.min_iboot,
+                    "min_macos": ipsw.min_macos,
+                    "min_sfr": ipsw.min_sfr,
+                    "expert_only": ipsw.expert_only,
+                    "devices": ipsw.devices,
+                }
+                for ipsw in minver
+            ])
+            print("Available candidates:", [ipsw.version for ipsw in avail])
         if not avail:
             p_error("Your system firmware is too old.")
             p_error(f"Please upgrade to macOS {minver[0].version} or newer.")
