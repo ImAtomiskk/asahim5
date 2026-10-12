@@ -137,7 +137,7 @@ IPSW_VERSIONS = [
          "27.0", 
          "mBoot-20457.1.29", 
          "26.1.434.0.0,0", 
-         True,
+         False,
          ["j704ap","j714ap","j714sap","j714cap","j714map","j716sap","j716cap","j716map","j813ap","j815ap"],
          "https://updates.cdn-apple.com/2026FallFCS/59241290-5d51-4ca8-9df4-31624b9a4eac/UniversalMac_27.0.1_26A434_Restore.ipsw"),
 ]
@@ -618,28 +618,30 @@ class InstallerMain:
                  and (not ipsw.expert_only or self.expert)]
 
         minver.sort(key=lambda ipsw: split_ver(ipsw.version))
-        if expert_only == True:
-            print("\n=== DEBUG: choose_ipsw ===")
-            print("System iBoot:", repr(self.sysinfo.sys_firmware),
-                  split_ver(self.sysinfo.sys_firmware))
-            print("System macOS:", repr(self.sysinfo.macos_ver),
-                  split_ver(self.sysinfo.macos_ver))
-            print("System SFR:", repr(self.sysinfo.sfr_full_ver),
-                  split_ver(self.sysinfo.sfr_full_ver))
-            print("Device class:", repr(self.sysinfo.device_class))
-            print("Supported firmware:", repr(supported_fw))
-            print("Candidates:", [
-                {
-                    "version": ipsw.version,
-                    "min_iboot": ipsw.min_iboot,
-                    "min_macos": ipsw.min_macos,
-                    "min_sfr": ipsw.min_sfr,
-                    "expert_only": ipsw.expert_only,
-                    "devices": ipsw.devices,
-                }
-                for ipsw in minver
-            ])
-            print("Available candidates:", [ipsw.version for ipsw in avail])
+        print("""
+        \n=================================
+        System Information: choose_ipsw
+        =================================""")
+        print("System iBoot:", repr(self.sysinfo.sys_firmware),
+              split_ver(self.sysinfo.sys_firmware))
+        print("System macOS:", repr(self.sysinfo.macos_ver),
+              split_ver(self.sysinfo.macos_ver))
+        print("System SFR:", repr(self.sysinfo.sfr_full_ver),
+              split_ver(self.sysinfo.sfr_full_ver))
+        print("Device class:", repr(self.sysinfo.device_class))
+        print("Supported firmware:", repr(supported_fw))
+        print("Candidates:", [
+            {
+                "version": ipsw.version,
+                "min_iboot": ipsw.min_iboot,
+                "min_macos": ipsw.min_macos,
+                "min_sfr": ipsw.min_sfr,
+                "expert_only": ipsw.expert_only,
+                "devices": ipsw.devices,
+            }
+            for ipsw in minver
+        ])
+        print("Available candidates:", [ipsw.version for ipsw in avail])
         if not avail:
             p_error("Your system firmware is too old.")
             p_error(f"Please upgrade to macOS {minver[0].version} or newer.")
