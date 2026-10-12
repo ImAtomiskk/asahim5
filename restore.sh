@@ -70,7 +70,7 @@ fi
 sudo -v
 echo "Starting idevicerestore. Keep the USB cable connected and do not interrupt power."
 set +e
-sudo idevicerestore -e -d "$IPSW"
+sudo idevicerestore -e "$IPSW"
 status=$?
 set -e
 

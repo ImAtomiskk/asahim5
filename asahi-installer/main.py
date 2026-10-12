@@ -643,8 +643,19 @@ class InstallerMain:
         ])
         print("Available candidates:", [ipsw.version for ipsw in avail])
         if not avail:
-            p_error("Your system firmware is too old.")
-            p_error(f"Please upgrade to macOS {minver[0].version} or newer.")
+            p_error("No compatible IPSW is available for this device and OS option.")
+
+            if not minver:
+                p_error(
+                    "No IPSW passed the minimum-version, supported-firmware, "
+                    "and device-class checks."
+                )
+            else:
+                p_error(
+                    "IPSW candidates exist, but none satisfy the required "
+                    "iBoot, macOS, SFR, and expert-mode requirements."
+                )
+
             sys.exit(1)
 
         if self.expert:
@@ -987,6 +998,7 @@ class InstallerMain:
         print()
         p_message("Please make sure you are familiar with our documentation at:")
         p_plain( f"  {col(BLUE, BRIGHT)}{DISTRO_DOCS}{col()}")
+        p_plain( f"{col(BLUE, BRIGHT)}Source{col()}")
         p_plain( f"  {col(BLUE, BRIGHT)}https://github.com/ImAtomiskk/asahim5{col()}")
         print()
         p_question("Press enter to continue.")
