@@ -64,7 +64,7 @@ else
 fi
 
 set +e
-macos_ver=$(/usr/libexec/PlistBuddy -c "Print :ProductVersion" \
+macos_ver=$(/usr/libexec sudo/PlistBuddy -c "Print :ProductVersion" \
 	/System/Library/CoreServices/SystemVersion.plist)
 res=$?
 set -e
@@ -93,8 +93,8 @@ if [ $(arch) != "arm64" ]; then
     echo "Don't worry, we can fix that for you. Switching to ARM64 mode..."
 
     # This loses env vars in some security states, so just re-launch ourselves
-    exec arch -arm64 ./install.sh
+    exec sudo arch -arm64 ./install.sh
 fi
 
 exec </dev/tty >/dev/tty 2>/dev/tty
-exec $python main.py "$@"
+exec sudo $python main.py "$@"
