@@ -64,7 +64,7 @@ else
 fi
 
 set +e
-macos_ver=$(/usr/libexec sudo/PlistBuddy -c "Print :ProductVersion" \
+macos_ver=$(/usr/libexec/PlistBuddy -c "Print :ProductVersion" \
 	/System/Library/CoreServices/SystemVersion.plist)
 res=$?
 set -e
