@@ -137,8 +137,8 @@ IPSW_VERSIONS = [
          "27.0", 
          "mBoot-20457.1.29", 
          "26.1.434.0.0,0", 
-         False, 
-         ["j714ap","j714sap","j714cap","j714map","j716sap","j716cap","j716map","j813ap","j815ap"], 
+         True,
+         ["j704ap","j714ap","j714sap","j714cap","j714map","j716sap","j716cap","j716map","j813ap","j815ap"],
          "https://updates.cdn-apple.com/2026FallFCS/59241290-5d51-4ca8-9df4-31624b9a4eac/UniversalMac_27.0.1_26A434_Restore.ipsw"),
 ]
 
@@ -964,6 +964,7 @@ class InstallerMain:
         print()
         p_message("Please make sure you are familiar with our documentation at:")
         p_plain( f"  {col(BLUE, BRIGHT)}{DISTRO_DOCS}{col()}")
+        p_plain( f"  {col(BLUE, BRIGHT)}https://github.com/ImAtomiskk/asahim5{col()}")
         print()
         p_question("Press enter to continue.")
         self.input()

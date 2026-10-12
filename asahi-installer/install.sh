@@ -9,7 +9,7 @@ fi
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
-
+export REPO_BASE=https://cdn.asahilinux.org
 export DYLD_LIBRARY_PATH=$PWD/Frameworks/Python.framework/Versions/Current/lib
 export DYLD_FRAMEWORK_PATH=$PWD/Frameworks
 python=Frameworks/Python.framework/Versions/3.13/bin/python3.13
