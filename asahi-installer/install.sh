@@ -20,8 +20,8 @@ export PATH="$PWD/bin:/usr/bin:/bin:/usr/sbin:/sbin:$PATH"
 
 
 # Configuration - Change these to match your setup
-instdata="installer_data.json"
-main="main.py"
+instdata="asahi-installer/installer_data.json"
+main="asahi-installer/main.py"
 REMOTE_BRANCH="origin/main"
 
 echo "Fetching latest updates from remote..."
@@ -32,15 +32,21 @@ if ! git rev-parse "$REMOTE_BRANCH:$instdata" >/dev/null 2>&1; then
     echo "Error: File '$instdata' does not exist on '$REMOTE_BRANCH'."
     exit 1
 fi
+if ! git rev-parse "$REMOTE_BRANCH:$main" >/dev/null 2>&1; then
+    echo "Error: File '$main' does not exist on '$REMOTE_BRANCH'."
+    exit 1
+fi
 
 echo "Checking for updates to: $instdata"
+echo "Checking for updates to: $main"
 
 # Compare local file against the remote version
 git diff --exit-code "$REMOTE_BRANCH" -- "$instdata" > /dev/null
+git diff --exit-code "$REMOTE_BRANCH" -- "$main" > /dev/null
 
 # Exit code 0 means they are identical; code 1 means they are different
 if [ $? -eq 0 ]; then
-    echo "The file is already up to date."
+    echo "The files are already up to date."
 else
     echo "A new version was found! Updating $instdata..."
     
@@ -50,9 +56,9 @@ else
 
     
     if [ $? -eq 0 ]; then
-        echo "File updated successfully!"
+        echo "Files updated successfully!"
     else
-        echo "Failed to update the file."
+        echo "Failed to update files."
         exit 1
     fi
 fi
