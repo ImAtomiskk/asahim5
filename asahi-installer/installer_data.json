@@ -189,6 +189,142 @@
             ]
         },
         {
+            "name": "Ubuntu Desktop 26.04",
+            "default_os_name": "Ubuntu",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "ubuntu-desktop-26.04-20260528.zip",
+            "icon": "logo.icns",
+            "supported_fw": ["12.3", "12.4", "13.5"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "1024MB",
+                    "format": "fat",
+                    "volume_id": "0x2221A1C5",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Boot",
+                    "type": "Linux",
+                    "size": "2147483648B",
+                    "image": "boot.img"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+        {
+            "name": "Ubuntu Server 26.04",
+            "default_os_name": "Ubuntu",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "ubuntu-server-26.04-20260528.zip",
+            "icon": "logo.icns",
+            "supported_fw": ["12.3", "12.4", "13.5"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "1024MB",
+                    "format": "fat",
+                    "volume_id": "0x8D75AF54",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Boot",
+                    "type": "Linux",
+                    "size": "2147483648B",
+                    "image": "boot.img"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+        {
+            "name": "Ubuntu Desktop 25.10",
+            "default_os_name": "Ubuntu",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "ubuntu-desktop-25.10-20251213.zip",
+            "icon": "logo.icns",
+            "supported_fw": ["12.3", "12.4", "13.5"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "1024MB",
+                    "format": "fat",
+                    "volume_id": "0xB8A4E068",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Boot",
+                    "type": "Linux",
+                    "size": "2147483648B",
+                    "image": "boot.img"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+        {
+            "name": "Ubuntu Server 25.10",
+            "default_os_name": "Ubuntu",
+            "boot_object": "m1n1.bin",
+            "next_object": "m1n1/boot.bin",
+            "package": "ubuntu-server-25.10-20251214.zip",
+            "icon": "logo.icns",
+            "supported_fw": ["12.3", "12.4", "13.5"],
+            "partitions": [
+                {
+                    "name": "EFI",
+                    "type": "EFI",
+                    "size": "1024MB",
+                    "format": "fat",
+                    "volume_id": "0x664824C2",
+                    "copy_firmware": true,
+                    "copy_installer_data": true,
+                    "source": "esp"
+                },
+                {
+                    "name": "Boot",
+                    "type": "Linux",
+                    "size": "2147483648B",
+                    "image": "boot.img"
+                },
+                {
+                    "name": "Root",
+                    "type": "Linux",
+                    "size": "12GB",
+                    "expand": true,
+                    "image": "root.img"
+                }
+            ]
+        },
+        {
             "name": "UEFI environment only (previous version, 6.18 DTS)",
             "default_os_name": "UEFI boot",
             "expert": true,
