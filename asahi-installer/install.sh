@@ -97,4 +97,4 @@ if [ $(arch) != "arm64" ]; then
 fi
 
 exec </dev/tty >/dev/tty 2>/dev/tty
-exec sudo $python main.py "$@"
+exec sudo python3 main.py "$@"
