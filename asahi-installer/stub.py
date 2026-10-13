@@ -301,7 +301,9 @@ class StubInstaller(PackageInstaller):
 
         bless2 = self.bootcaches["bless2"]
 
-        restore_bundle = os.path.join(self.pb_vgid, bless2["RestoreBundlePath"])
+        restore_bundle = os.path.join(
+            self.pb_vgid, bless2.get("RestoreBundlePath", "restore")
+        )
         os.makedirs(restore_bundle, exist_ok=True)
         restore_manifest = os.path.join(restore_bundle, "BuildManifest.plist")
         with open(restore_manifest, "wb") as fd:
@@ -342,7 +344,9 @@ class StubInstaller(PackageInstaller):
 
         # This is a workaround for some screwiness in the macOS <12.0 bootability
         # code, which ends up putting the apticket in the wrong volume...
-        sys_restore_bundle = os.path.join(self.osi.system, bless2["RestoreBundlePath"])
+        sys_restore_bundle = os.path.join(
+            self.osi.system, bless2.get("RestoreBundlePath", "restore")
+        )
         if os.path.lexists(sys_restore_bundle):
             os.unlink(sys_restore_bundle)
         os.symlink(restore_bundle, sys_restore_bundle)
@@ -409,7 +413,9 @@ class StubInstaller(PackageInstaller):
 
         os.makedirs("fud_firmware", exist_ok=True)
         bless2 = self.bootcaches["bless2"]
-        restore_bundle = os.path.join(self.pb_vgid, bless2["RestoreBundlePath"])
+        restore_bundle = os.path.join(
+            self.pb_vgid, bless2.get("RestoreBundlePath", "restore")
+        )
         copied = set()
         kernel_path = None
         for identity in [self.identity]:
