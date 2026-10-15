@@ -5,15 +5,6 @@
 if true; then
     set -e
     echo Welcome to the Asahi Downloader
-    sed_inplace() {
-        if sed --version >/dev/null 2>&1; then
-            # GNU sed (Linux)
-            sed -i "$@"
-        else
-            # BSD sed (macOS)
-            sed -i '' "$@"
-        fi
-    }
     if [ -f /etc/os-release ]; then
         . /etc/os-release
         if [ -e /sys ]; then
@@ -27,7 +18,7 @@ if true; then
             echo "Asahi Linux can only be installed from macOS, or downloaded on Linux"
             exit 0
         fi
-    elif [ command -v sw_vers ]; then
+    elif command -v sw_vers &> /dev/null; then
         if [ -e /sys ]; then
             echo "Download Platform: Linux"
             echo "Proceeding.. Please Wait"
