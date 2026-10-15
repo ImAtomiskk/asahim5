@@ -9,6 +9,21 @@ Progressed with Trial & Error
 
 ## Why? Apple is Discontinuing Rosetta/2 in future macOS releases (macOS 27, 28, etc.) and I still want a chance to run "Intel" apps
 
+## Help Test and Give Feedback!
+```
+curl https://raw.githubusercontent.com/ImAtomiskk/asahim5/main/asahi.sh | sh
+```
+### or
+**Download Here**  
+https://github.com/ImAtomiskk/asahim5/releases/download/10.12.2026/asahi.sh  
+then run in same directory
+```
+chmod +x asahi.sh
+./asahi.sh
+```
+
+<small>Note: can cause irreversible damage to data and/or system.<small>
+
 ## Progress
 ```
 Start [----|-----------------------|------(#)-----|--------------] Working Linux
