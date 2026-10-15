@@ -275,3 +275,6 @@ class DiskUtil:
     def resizeContainer(self, name, size):
         size = str(size)
         self.action("apfs", "resizeContainer", name, size, verbose=2)
+
+    def deleteContainer(self, name):
+        self.action("apfs", "deleteContainer", name, verbose=True)

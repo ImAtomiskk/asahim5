@@ -2,6 +2,25 @@
 
 ---
 
+# 0.1 - Installer Info (asahi.sh)
+| Installer option                   |                             Observed result                             | What it suggests                                                                                                     |
+|------------------------------------|:-----------------------------------------------------------------------:|----------------------------------------------------------------------------------------------------------------------|
+| Fedora KDE Desktop                 |                       Bless error (macOS 26.0.1)                        | The installation or boot-volume selection path fails at or around blessing. We need the exact error to identify why. |
+| Fedora Others                      |                                Untested                                 | Unknown                                                                                                              |
+| Ubuntu                             |                                Untested                                 | Unknown                                                                                                              |
+| Asahi Linux (ALARM)                |                                Untested                                 | Unknown                                                                                                              |
+| Other distributions                |                                Untested                                 | Unknown                                                                                                              |
+| UEFI environment only (Patched M5) | support.apple.com/mac/restore (1)  or support.apple.com/mac/startup (2) | (DO NOT ATTEMPT) The firmware likely rejects the boot attempt or boot path. The exact cause is still unknown.        |
+| UEFI environment only              |                                Untested                                 | Unknown                                                                                                              |
+| m1n1 tethered boot                 |             “This version of macOS needs to be reinstalled”             | The stub macOS boot or Recovery handoff is failing before the expected installer continuation appears.               |
+
+## Note If Testing with Installer: the startup options menu would likely bootloop, do it 2-3 times and it'll work.
+
+### (1) - support.apple.com/mac/restore screen in question  
+![](https://cdsassets.apple.com/live/7WUAS350/images/macos/macos-startup-exclamation-mark-in-circle.png)
+### (2) - support.apple.com/mac/startup screen in question
+![](https://cdsassets.apple.com/live/7WUAS350/images/macos/macos-startup-circle-with-slash-circle-with-line.png)
+
 # 1.0 - Preparation
 
 ## Requirements

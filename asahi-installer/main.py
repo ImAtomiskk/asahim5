@@ -437,6 +437,21 @@ class InstallerMain:
         self.ins.load_ipsw(ipsw)
         return os_size
 
+    def run_sys_command(self, command):
+
+        process = subprocess.Popen(
+            command,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.STDOUT,  # Redirect errors to stdout so they print live too
+            text=True
+        )
+
+        for line in process.stdout:
+            print(line, end='', flush=True)
+
+        return_code = process.wait()
+        return return_code
+
     def action_repair_or_upgrade(self, oses, upgrade):
         choices = {str(i): f"{p.desc}\n      {str(o)}" for i, (p, o) in enumerate(oses)}
 
@@ -616,6 +631,7 @@ class InstallerMain:
         self.step2(report=True)
 
     def choose_ipsw(self, supported_fw=None):
+        subprocess.run(["clear"])
         sys_iboot = split_ver(self.sysinfo.sys_firmware)
         sys_macos = split_ver(self.sysinfo.macos_ver)
         sys_sfr = split_ver(self.sysinfo.sfr_full_ver)
@@ -867,6 +883,7 @@ class InstallerMain:
             return True
 
     def action_resize(self, resizable):
+        subprocess.run(["clear"])
         choices = {str(i): p.desc for i,p in enumerate(self.parts) if p in resizable}
 
         print()
@@ -986,6 +1003,38 @@ class InstallerMain:
         print()
 
         return True
+
+    def action_delete(self):
+        result = subprocess.run(['diskutil', 'list'], capture_output=True, text=True)
+        print("Disks: ", result.stdout.strip())
+        print()
+        DISKREMOVE = input("Select one of disks/partitions above to uninstall asahi from: ")
+        if DISKREMOVE == "exit":
+            subprocess.run(["clear"])
+            self.main_loop()
+        elif DISKREMOVE is "/dev/disk0" or "disk0":
+            print("You cannot remove disk0 (root)")
+            time.sleep(2)
+            self.action_delete()
+        elif DISKREMOVE is not None:
+            print(f"You have chosen to delete {DISKREMOVE}, make sure the information below is correct.")
+            diskinfo = subprocess.run(["diskutil", "info", {DISKREMOVE}], capture_output=True, text=True)
+            print(diskinfo.stdout.strip())
+            tmp1 = input("Are you sure you want to delete this disk? (y/n) ")
+            if tmp1 == "y" or tmp1 == "Y":
+                run_sys_command(['diskutil', 'apfs', 'deleteContainer', DISKREMOVE])
+            elif tmp1 == "n" or tmp1 == "N":
+                subprocess.run(["clear"])
+                self.main_loop()
+            else:
+                print("Not a valid option")
+                time.sleep(2)
+                self.action_delete()
+        else:
+            print("Select a valid disk")
+            time.sleep(2)
+            action_delete()
+
 
     def action_select_disk(self):
         choices = {"1": "Internal storage"}
@@ -1198,32 +1247,35 @@ class InstallerMain:
         actions = {}
 
         default = None
-        if oses_incomplete:
-            actions["p"] = "Repair an incomplete installation"
+        if True:
+            actions["p"] = "Repair an incomplete installation (Standard)"
             default = default or "p"
-        if parts_free and is_gpt:
-            actions["f"] = "Install an OS into free space"
+        if True:
+            actions["f"] = "Install an OS into free space (Standard)"
             default = default or "f"
-        if parts_empty_apfs and is_gpt and False: # This feature is confusing, disable it for now
+        if False: # This feature is confusing, disable it for now
             actions["a"] = "Install an OS into an existing APFS container"
-        if parts_resizable and is_gpt:
-            actions["r"] = "Resize an existing partition to make space for a new OS"
+        if True:
+            actions["r"] = "Resize an existing partition to make space for a new OS (Standard)"
             default = default or "r"
-        if self.cur_disk != self.sys_disk:
-            actions["w"] = "Wipe and install into the whole disk"
+        if True:
+            actions["w"] = "Wipe and install into the whole disk (DANGEROUS!)"
             # Never make this default!
-        if self.external_disks:
-            actions["d"] = "Select another disk for installation"
+        if True:
+            actions["d"] = "Select another disk for installation (Advanced)"
             default = default or "d"
-        if oses_upgradable:
-            actions["m"] = "Upgrade m1n1 on an existing OS"
+        if True:
+            actions["m"] = "Upgrade m1n1 on an existing OS (Advanced)"
             default = default or "m"
-        if oses_vendorfw:
-            actions["v"] = "Rebuild vendor firmware package"
+        if True:
+            actions["v"] = "Rebuild vendor firmware package (Advanced)"
             default = default or "v"
-        if oses_non_vol_boot:
-            actions["7"] = "Fix macOS 27 boot picker compatibility"
+        if True:
+            actions["7"] = "Fix macOS 27 boot picker compatibility (Patch, Advanced)"
             default = default or "7"
+        if True:
+            actions["l"] = "Uninstall Asahi Linux (Advanced)"
+            default = default or "l"
 
         if not actions:
             p_error("No actions available on this system.")
@@ -1239,23 +1291,35 @@ class InstallerMain:
         act = self.choice("Action", actions, default)
 
         if act == "f":
+            subprocess.run(["clear"])
             return self.action_install_into_free(parts_free)
         elif act == "a":
+            subprocess.run(["clear"])
             return self.action_install_into_container(parts_empty_apfs)
         elif act == "r":
+            subprocess.run(["clear"])
             return self.action_resize(parts_resizable)
         elif act == "m":
+            subprocess.run(["clear"])
             return self.action_repair_or_upgrade(oses_upgradable, upgrade=True)
         elif act == "p":
+            subprocess.run(["clear"])
             return self.action_repair_or_upgrade(oses_incomplete, upgrade=False)
         elif act == "d":
+            subprocess.run(["clear"])
             return self.action_select_disk()
         elif act == "w":
+            subprocess.run(["clear"])
             return self.action_wipe()
         elif act == "v":
+            subprocess.run(["clear"])
             return self.action_rebuild_vendorfw(oses_vendorfw)
         elif act == "7":
+            subprocess.run(["clear"])
             return self.action_set_vol_bootable(oses_non_vol_boot)
+        elif act == "l":
+            subprocess.run(["clear"])
+            return self.action_delete()
         elif act == "q":
             return False
 

@@ -14,6 +14,12 @@ Progressed with Trial & Error
 Start [----|-----------------------|------(#)-----|--------------] Working Linux
           Finish M1N1 Patch    Patch Kernel     Booting Kernel
 ```
+## Installer Progress
+```
+Start [----|----------------(#)------|-------------|-------------] Working Installer
+        Add M5 Device IDs          Boot m1n1      Boot a Real OS
+```
+
 
 ## Files (All Files are **exactly** the same ones that I use/test on my own M5)
 
