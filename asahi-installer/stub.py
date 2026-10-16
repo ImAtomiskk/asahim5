@@ -449,6 +449,10 @@ class StubInstaller(PackageInstaller):
                 os.symlink(os.path.join("..", path),
                            os.path.join(fud_dir, key + ".im4p"))
 
+        logging.info(f"Recovery mount root: {self.osi.recovery}")
+        logging.info(f"Recovery volume group: {self.osi.vgid}")
+        logging.info(
+            f"Expected BaseSystem path: {os.path.join(self.osi.recovery, self.osi.vgid, 'usr/standalone/firmware/arm64eBaseSystem.dmg')}")
         img = os.path.join(self.osi.recovery, self.osi.vgid,
                            "usr/standalone/firmware/arm64eBaseSystem.dmg")
         logging.info("Attaching recovery ramdisk")

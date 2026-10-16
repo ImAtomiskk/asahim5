@@ -86,7 +86,12 @@ if ! arch -arm64 ls >/dev/null 2>/dev/null; then
     echo "May we interest you in https://t2linux.org/ instead?"
     exit 1
 fi
-
+if [ -e "/proc" ]; then
+     echo
+     echo "Looks like this is an Linux Machine!"
+     echo "Sorry, Asahi Linux only supports Apple Macs."
+     echo "May we interest you in https://kernel.org or https://linux.org instead?"
+fi
 if [ $(arch) != "arm64" ]; then
     echo
     echo "You're running the installer in Intel mode under Rosetta!"
